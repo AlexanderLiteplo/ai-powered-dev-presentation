@@ -12,25 +12,29 @@ const slides = [
   {
     id: 'skeptics',
     title: '🤔 Skeptical About AI Coding?',
-    subtitle: 'Race the AI!',
+    subtitle: 'Even Linus Torvalds is vibe-coding now',
     content: (
-      <div className="content-box">
-        <div className="challenge-box">
-          <h3>💡 The Challenge</h3>
-          <p>Next time you have a bug, try this:</p>
-          <ol>
-            <li>Open <span className="highlight">Cursor IDE</span></li>
-            <li>Press <kbd>⌘ + L</kbd> to open AI chat</li>
-            <li>Race the AI to fix it!</li>
-          </ol>
+      <div className="skeptics-container">
+        <div className="torvalds-section">
+          <img src="/images/torvalds.jpeg" alt="Linus Torvalds vibe-coding" className="torvalds-image" />
+          <div className="torvalds-caption">
+            <p>🐧 <strong>Linus Torvalds</strong> (creator of Linux & Git) admits his Python visualizer tool <span className="highlight">"has been basically written by vibe-coding"</span></p>
+          </div>
         </div>
-        <div className="tip-box">
-          <h3>💰 Pro Tip: Model Selection</h3>
-          <p>For smaller, precise edits in Cursor:</p>
-          <p className="recommendation">
-            <span className="model-badge gemini">Gemini 3 Flash</span>
-            <span className="badge-desc">Fast, cheap, great for quick fixes</span>
-          </p>
+        <div className="challenge-section">
+          <div className="challenge-box">
+            <h3>💡 The Challenge</h3>
+            <p>Next time you have a bug, try this:</p>
+            <ol>
+              <li>Open <span className="highlight">Cursor IDE</span></li>
+              <li>Press <kbd>⌘ + L</kbd> to open AI chat</li>
+              <li>Race the AI to fix it!</li>
+            </ol>
+          </div>
+          <div className="tip-box">
+            <h3>💰 Pro Tip</h3>
+            <p>Use <span className="model-badge gemini">Gemini 3 Flash</span> for quick fixes in Cursor</p>
+          </div>
         </div>
       </div>
     ),
