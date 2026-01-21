@@ -352,6 +352,53 @@ const slides = [
     bgGradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
   },
   {
+    id: 'prompting-style',
+    title: '💬 Prompting Style',
+    subtitle: 'Less is more',
+    content: (
+      <div className="prompting-container">
+        <div className="prompting-main">
+          <div className="prompting-card primary">
+            <div className="prompting-icon">🎯</div>
+            <h3>Minimal but High-Quality Context</h3>
+            <p>Give the AI exactly what it needs — no more, no less</p>
+            <ul>
+              <li>Be specific about what you want</li>
+              <li>Include relevant file paths or code snippets</li>
+              <li>Skip unnecessary background info</li>
+            </ul>
+          </div>
+          <div className="prompting-card warning">
+            <div className="prompting-icon">⚠️</div>
+            <h3>Don't Let History Build Up</h3>
+            <p>Long conversation history = confused AI + slower responses</p>
+            <ul>
+              <li>Context windows have limits</li>
+              <li>Old context can mislead new tasks</li>
+              <li>Fresh starts often work better</li>
+            </ul>
+          </div>
+        </div>
+        <div className="prompting-solution">
+          <h3>🧹 Use the Compact Command</h3>
+          <div className="compact-commands">
+            <div className="compact-item">
+              <span className="tool-badge claude">Claude Code</span>
+              <code>/compact</code>
+              <p>Summarizes and shrinks conversation history</p>
+            </div>
+            <div className="compact-item">
+              <span className="tool-badge cursor">Cursor</span>
+              <code>New Chat / Clear Context</code>
+              <p>Start fresh when context gets bloated</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+    bgGradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+  },
+  {
     id: 'personal-prefs',
     title: '✨ Personal Preferences',
     subtitle: 'Making AI work for your workflow',

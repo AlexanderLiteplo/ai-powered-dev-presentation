@@ -1136,3 +1136,144 @@ kbd {
     flex-direction: column;
   }
 }
+
+/* Prompting Style Slide */
+.prompting-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.prompting-main {
+  display: flex;
+  gap: 20px;
+}
+
+.prompting-card {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.prompting-card.primary {
+  border-top: 4px solid #667eea;
+}
+
+.prompting-card.warning {
+  border-top: 4px solid #ff9800;
+}
+
+.prompting-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.prompting-card h3 {
+  font-size: 1.15rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.prompting-card > p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.prompting-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.prompting-card li {
+  padding: 6px 0;
+  padding-left: 20px;
+  position: relative;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.prompting-card li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+}
+
+.prompting-solution {
+  background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);
+  border: 2px solid #667eea;
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.prompting-solution h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.compact-commands {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.compact-item {
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+}
+
+.tool-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.tool-badge.claude {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.tool-badge.cursor {
+  background: linear-gradient(135deg, #00d4aa 0%, #00a67e 100%);
+  color: white;
+}
+
+.compact-item code {
+  display: block;
+  background: #1e1e1e;
+  color: #4ec9b0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.compact-item p {
+  color: #666;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .prompting-main {
+    flex-direction: column;
+  }
+
+  .compact-commands {
+    flex-direction: column;
+    align-items: center;
+  }
+}
