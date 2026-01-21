@@ -376,6 +376,60 @@ const slides = [
     bgGradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
   },
   {
+    id: 'permissions',
+    title: '🔐 Permission Settings',
+    subtitle: 'Fine-grained control over Claude Code',
+    content: (
+      <div className="permissions-container">
+        <div className="permissions-left">
+          <div className="config-box">
+            <h3>📁 ~/.claude/settings.json</h3>
+            <pre>{`{
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "ask": [
+      "Bash(gcloud:*)",
+      "Bash(terraform:*)",
+      "Bash(kubectl:*)",
+      "Bash(aws:*)"
+    ]
+  }
+}`}</pre>
+          </div>
+          <div className="verify-box">
+            <span className="verify-icon">✅</span>
+            <p>Run <code>/permissions</code> to verify active rules</p>
+          </div>
+        </div>
+        <div className="permissions-right">
+          <div className="info-card">
+            <h3>⚡ How It Works</h3>
+            <ul>
+              <li><strong>bypassPermissions</strong> — Auto-approve everything</li>
+              <li><strong>ask rules</strong> — Require permission for specific commands</li>
+            </ul>
+          </div>
+          <div className="info-card">
+            <h3>📋 Rule Evaluation Order</h3>
+            <ol>
+              <li><span className="rule-badge deny">Deny</span> Always checked first</li>
+              <li><span className="rule-badge ask">Ask</span> Your protected commands</li>
+              <li><span className="rule-badge allow">Allow</span> Everything else</li>
+            </ol>
+          </div>
+          <div className="info-card">
+            <h3>🔤 Pattern Syntax</h3>
+            <ul>
+              <li><code>Bash(gcloud:*)</code> — Prefix matching</li>
+              <li><code>Bash(gcloud *)</code> — Glob matching</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    ),
+    bgGradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+  },
+  {
     id: 'end',
     title: '🙏 Thanks!',
     subtitle: 'Questions?',
@@ -400,13 +454,21 @@ const slides = [
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [isAnimating, setIsAnimating] = useState(false)
+  const [displaySlide, setDisplaySlide] = useState(0)
+  const [isTransitioning, setIsTransitioning] = useState(false)
 
   const goToSlide = (index: number) => {
-    if (index >= 0 && index < slides.length && !isAnimating) {
-      setIsAnimating(true)
-      setCurrentSlide(index)
-      setTimeout(() => setIsAnimating(false), 500)
+    if (index >= 0 && index < slides.length && !isTransitioning && index !== currentSlide) {
+      setIsTransitioning(true)
+      // Start fade out
+      setTimeout(() => {
+        setDisplaySlide(index)
+        setCurrentSlide(index)
+        // Fade back in
+        setTimeout(() => {
+          setIsTransitioning(false)
+        }, 50)
+      }, 250)
     }
   }
 
@@ -426,15 +488,15 @@ function App() {
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [currentSlide])
+  }, [currentSlide, isTransitioning])
 
-  const slide = slides[currentSlide]
+  const slide = slides[displaySlide]
 
   return (
-    <div className="presentation" style={{ background: slide.bgGradient }}>
-      <div className={`slide ${isAnimating ? 'animating' : ''}`}>
+    <div className="presentation" style={{ background: slides[currentSlide].bgGradient }}>
+      <div className={`slide ${isTransitioning ? 'fade-out' : 'fade-in'}`}>
         <div className="slide-number">
-          {currentSlide + 1} / {slides.length}
+          {displaySlide + 1} / {slides.length}
         </div>
 
         <div className="slide-content">
