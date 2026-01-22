@@ -322,10 +322,28 @@ kbd {
 }
 
 /* Cost Comparison */
+.cost-layout {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 1100px;
+  align-items: center;
+}
+
+.pokemon-section {
+  flex: 0 0 220px;
+}
+
+.pokemon-image {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
 .cost-comparison {
   display: flex;
-  gap: 20px;
-  width: 100%;
+  gap: 15px;
+  flex: 1;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -333,12 +351,28 @@ kbd {
 .cost-card {
   background: white;
   border-radius: 16px;
-  padding: 25px;
-  width: 200px;
+  padding: 20px;
+  width: 170px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  
+
   position: relative;
+}
+
+@media (max-width: 900px) {
+  .cost-layout {
+    flex-direction: column;
+  }
+
+  .pokemon-section {
+    flex: none;
+    width: 180px;
+  }
+
+  .cost-card {
+    width: 140px;
+    padding: 15px;
+  }
 }
 
 .cost-card:nth-child(1) {  }

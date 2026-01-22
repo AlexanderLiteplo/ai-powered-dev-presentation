@@ -43,61 +43,66 @@ const slides = [
   {
     id: 'costs',
     title: '💵 Model Cost Comparison',
-    subtitle: 'Choose the right tool for the job',
+    subtitle: 'Choose your starter wisely',
     content: (
-      <div className="cost-comparison">
-        <div className="cost-card gemini-card">
-          <div className="cost-header">
-            <span className="model-icon">⚡</span>
-            <h3>Gemini 3 Flash</h3>
-          </div>
-          <div className="cost-price">~$0.01-0.05</div>
-          <div className="cost-desc">per task</div>
-          <ul>
-            <li>Quick fixes</li>
-            <li>Small edits</li>
-            <li>Code snippets</li>
-          </ul>
+      <div className="cost-layout">
+        <div className="pokemon-section">
+          <img src="/images/pokemon.webp" alt="Choose your starter" className="pokemon-image" />
         </div>
-        <div className="cost-card sonnet-card">
-          <div className="cost-header">
-            <span className="model-icon">🎵</span>
-            <h3>Sonnet 4.5</h3>
+        <div className="cost-comparison">
+          <div className="cost-card gemini-card">
+            <div className="cost-header">
+              <span className="model-icon">⚡</span>
+              <h3>Gemini 3 Flash</h3>
+            </div>
+            <div className="cost-price">~$0.01-0.05</div>
+            <div className="cost-desc">per task</div>
+            <ul>
+              <li>Quick fixes</li>
+              <li>Small edits</li>
+              <li>Code snippets</li>
+            </ul>
           </div>
-          <div className="cost-price">~$0.10-0.50</div>
-          <div className="cost-desc">per task</div>
-          <ul>
-            <li>Medium complexity</li>
-            <li>Good balance</li>
-            <li>Daily tasks</li>
-          </ul>
-        </div>
-        <div className="cost-card opus-card featured">
-          <div className="featured-badge">⭐ My Pick</div>
-          <div className="cost-header">
-            <span className="model-icon">🎭</span>
-            <h3>Opus 4.5</h3>
+          <div className="cost-card sonnet-card">
+            <div className="cost-header">
+              <span className="model-icon">🎵</span>
+              <h3>Sonnet 4.5</h3>
+            </div>
+            <div className="cost-price">~$0.10-0.50</div>
+            <div className="cost-desc">per task</div>
+            <ul>
+              <li>Medium complexity</li>
+              <li>Good balance</li>
+              <li>Daily tasks</li>
+            </ul>
           </div>
-          <div className="cost-price">~$1-5+</div>
-          <div className="cost-desc">per task</div>
-          <ul>
-            <li>Complex tasks</li>
-            <li>Long agents</li>
-            <li>Best results</li>
-          </ul>
-        </div>
-        <div className="cost-card gpt-card">
-          <div className="cost-header">
-            <span className="model-icon">🧠</span>
-            <h3>GPT 5.2 High</h3>
+          <div className="cost-card opus-card featured">
+            <div className="featured-badge">⭐ My Pick</div>
+            <div className="cost-header">
+              <span className="model-icon">🎭</span>
+              <h3>Opus 4.5</h3>
+            </div>
+            <div className="cost-price">~$1-5+</div>
+            <div className="cost-desc">per task</div>
+            <ul>
+              <li>Complex tasks</li>
+              <li>Long agents</li>
+              <li>Best results</li>
+            </ul>
           </div>
-          <div className="cost-price">~$0.50-2</div>
-          <div className="cost-desc">per task</div>
-          <ul>
-            <li>Alternative</li>
-            <li>Good reasoning</li>
-            <li>Mixed results</li>
-          </ul>
+          <div className="cost-card gpt-card">
+            <div className="cost-header">
+              <span className="model-icon">🧠</span>
+              <h3>GPT 5.2 High</h3>
+            </div>
+            <div className="cost-price">~$0.50-2</div>
+            <div className="cost-desc">per task</div>
+            <ul>
+              <li>Alternative</li>
+              <li>Good reasoning</li>
+              <li>Mixed results</li>
+            </ul>
+          </div>
         </div>
       </div>
     ),
