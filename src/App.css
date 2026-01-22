@@ -588,12 +588,28 @@ kbd {
   width: 100%;
 }
 
+.title-screenshot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.title-screenshot {
+  max-width: 90%;
+  max-height: 450px;
+  border-radius: 16px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+  object-fit: contain;
+}
+
 .graph-image {
   max-width: 100%;
   max-height: 400px;
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  
+
 }
 
 .tweet-image {

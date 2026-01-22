@@ -6,7 +6,11 @@ const slides = [
     id: 'title',
     title: '🤖 AI-Powered Development',
     subtitle: 'How I Use Claude Code & AI in Daily Workflows',
-    content: null,
+    content: (
+      <div className="title-screenshot-container">
+        <img src="/images/title-screenshot.png" alt="AI Development Demo" className="title-screenshot" />
+      </div>
+    ),
     bgGradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
   },
   {
