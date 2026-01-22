@@ -41,6 +41,20 @@ const slides = [
     bgGradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
   },
   {
+    id: 'long-running',
+    title: '⏱️ Long-Running Agents',
+    subtitle: 'AI can now work autonomously for hours',
+    content: (
+      <div className="graph-container">
+        <img src="/images/graph.jpeg" alt="Time horizon of software engineering tasks" className="graph-image" />
+        <div className="graph-caption">
+          <p>📈 Claude Opus 4.5 leads with <span className="highlight">~5 hours</span> of autonomous work!</p>
+        </div>
+      </div>
+    ),
+    bgGradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+  },
+  {
     id: 'costs',
     title: '💵 Model Cost Comparison',
     subtitle: 'Choose your starter wisely',
@@ -134,20 +148,6 @@ const slides = [
       </div>
     ),
     bgGradient: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
-  },
-  {
-    id: 'long-running',
-    title: '⏱️ Long-Running Agents',
-    subtitle: 'AI can now work autonomously for hours',
-    content: (
-      <div className="graph-container">
-        <img src="/images/graph.jpeg" alt="Time horizon of software engineering tasks" className="graph-image" />
-        <div className="graph-caption">
-          <p>📈 Claude Opus 4.5 leads with <span className="highlight">~5 hours</span> of autonomous work!</p>
-        </div>
-      </div>
-    ),
-    bgGradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
   },
   {
     id: 'tweet',
