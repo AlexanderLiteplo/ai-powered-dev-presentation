@@ -41,6 +41,20 @@ const slides = [
     bgGradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
   },
   {
+    id: 'tweet',
+    title: '🐦 AI Building AI Tools',
+    subtitle: 'Cowork built with Claude Code in ~1.5 weeks',
+    content: (
+      <div className="tweet-container">
+        <img src="/images/tweet.jpeg" alt="Tweet about Claude Code building Cowork" className="tweet-image" />
+        <div className="tweet-caption">
+          <p>🔥 "How much of it did Claude Code write?" — <strong>"All of it"</strong></p>
+        </div>
+      </div>
+    ),
+    bgGradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+  },
+  {
     id: 'long-running',
     title: '⏱️ Long-Running Agents',
     subtitle: 'AI can now work autonomously for hours',
@@ -148,20 +162,6 @@ const slides = [
       </div>
     ),
     bgGradient: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
-  },
-  {
-    id: 'tweet',
-    title: '🐦 AI Building AI Tools',
-    subtitle: 'Cowork built with Claude Code in ~1.5 weeks',
-    content: (
-      <div className="tweet-container">
-        <img src="/images/tweet.jpeg" alt="Tweet about Claude Code building Cowork" className="tweet-image" />
-        <div className="tweet-caption">
-          <p>🔥 "How much of it did Claude Code write?" — <strong>"All of it"</strong></p>
-        </div>
-      </div>
-    ),
-    bgGradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
   },
   {
     id: 'ralph-loop',
