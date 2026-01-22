@@ -238,7 +238,9 @@ html, body, #root {
 }
 
 .reality-box {
-  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  background: linear-gradient(135deg, #ffe5e5 0%, #fff0f0 100%);
+  border: 2px solid #ff6b9d;
+  box-shadow: 0 4px 20px rgba(255, 107, 157, 0.15);
 }
 
 .quote-box {
@@ -246,10 +248,30 @@ html, body, #root {
   color: white;
   text-align: center;
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+  position: relative;
+}
+
+.quote-box::before {
+  content: '"';
+  font-size: 4rem;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  opacity: 0.3;
+  font-family: Georgia, serif;
+}
+
+.quote-box p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  line-height: 1.6;
 }
 
 @keyframes popIn {
@@ -263,10 +285,20 @@ html, body, #root {
   }
 }
 
-.challenge-box h3, .tip-box h3, .demo-box h3, .warning-box h3, .reality-box h3 {
+.challenge-box h3, .tip-box h3, .demo-box h3, .warning-box h3 {
   font-size: 1.3rem;
   margin-bottom: 15px;
   color: #333;
+}
+
+.reality-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ff1f5a;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .challenge-box ol {
@@ -659,19 +691,40 @@ kbd {
 /* Reality List */
 .reality-list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .reality-list li {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  padding: 12px 0;
-  font-size: 1.05rem;
-  color: #444;
+  gap: 16px;
+  padding: 18px 20px;
+  font-size: 1.1rem;
+  color: #2d2d2d;
+  background: white;
+  border-radius: 12px;
+  border-left: 4px solid #ff6b9d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.reality-list li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(255, 107, 157, 0.2);
 }
 
 .emoji-bullet {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #ff6b9d 0%, #ffa8c5 100%);
+  border-radius: 8px;
 }
 
 .subtitle-text {
