@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# AI-Powered Development Presentation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive presentation about using AI tools like Claude Code in daily development workflows. Built with React + Vite, featuring slides about model selection, autonomous agents, and real-world AI coding practices.
 
-Currently, two official plugins are available:
+## Quick Start with Claude Code
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. Install Claude Code
 
-## React Compiler
+Download and install Claude Code from: **https://code.anthropic.com**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Launch the Presentation
 
-## Expanding the ESLint configuration
+Once Claude Code is installed, simply paste this into Claude Code:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```
+https://github.com/AlexanderLiteplo/ai-powered-dev-presentation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Please clone this repo and launch the presentation using the open command.
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Claude Code will:
+- Clone the repository
+- Install dependencies
+- Start the development server
+- Open the presentation in your browser
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 3. Navigate the Slides
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Use **arrow keys** or **spacebar** to navigate forward
+- Use **left arrow** to go back
+- Click the dots at the bottom to jump to specific slides
+
+## Manual Installation
+
+If you prefer to install manually:
+
+```bash
+# Clone the repository
+git clone https://github.com/AlexanderLiteplo/ai-powered-dev-presentation.git
+cd ai-powered-dev-presentation
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
+
+Then open http://localhost:5173 in your browser.
+
+## Presentation Topics
+
+- 🤔 Why skeptics are coming around to AI coding
+- 🐦 Real-world examples of AI building production tools
+- ⏱️ Long-running autonomous agents
+- 💵 Model cost comparison and selection strategy
+- 🔁 The Ralph Wiggum Loop (autonomous development pattern)
+- 🎨 The reality of AI UI work
+- 🐛 Strategies for debugging with AI
+- ⚓ Grounding LLMs with tests and types
+- 💬 Prompting best practices
+
+## Tech Stack
+
+- React 18
+- Vite
+- TypeScript
+- CSS3 with gradients and animations
+
+---
+
+Built entirely with Claude Code demonstrating AI-powered development workflows.
